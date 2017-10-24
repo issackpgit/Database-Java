@@ -1,0 +1,1 @@
+SELECT a.ProductName, a.CategoryID, a.UnitPrice FROM PRODUCTS a INNER JOIN(SELECT CategoryID, MAX(UnitPrice)UnitPrice FROM PRODUCTS GROUP BY CategoryID) b ON a.CategoryID = b.CategoryID AND a.UnitPrice = b.UnitPrice;

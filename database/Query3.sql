@@ -1,0 +1,1 @@
+SELECT ProductName, UnitPrice FROM PRODUCTS WHERE UnitPrice >(SELECT AVG(UnitPrice) FROM PRODUCTS) ORDER BY UnitPrice;

@@ -1,0 +1,1 @@
+select distinct m.FirstName as manager_FirstName, e.FirstName as Employee_FirstName,e.LastName as Employee_LastName, e.Country as Employee_Country,e.BirthDate as Employee_BirthDate from EMPLOYEES e inner join Employees m on e.ReportsTo = m.EmployeeID WHERE e.BirthDate BETWEEN '01-01-1960' AND '12-31-1990' ORDER BY e.Country
